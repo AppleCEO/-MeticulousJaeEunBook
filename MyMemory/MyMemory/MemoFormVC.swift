@@ -8,9 +8,13 @@
 
 import UIKit
 
-class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
     @IBOutlet var contents: UITextView!
     @IBOutlet var preview: UIImageView!
+    
+    override func viewDidLoad() {
+        self.contents.delegate = self
+    }
     
     @IBAction func save(_ sender: Any) {
     }
