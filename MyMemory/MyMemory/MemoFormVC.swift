@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MemoFormVC: UIViewController {
+class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet var contents: UITextView!
     @IBOutlet var preview: UIImageView!
     
@@ -16,5 +16,17 @@ class MemoFormVC: UIViewController {
     }
     
     @IBAction func pick(_ sender: Any) {
+        let picker = UIImagePickerController()
+        
+        picker.delegate = self
+        picker.allowsEditing = true
+        
+        self.present(picker, animated: false)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        self.preview.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
+        
+        picker.dismiss(animated: false)
     }
 }
