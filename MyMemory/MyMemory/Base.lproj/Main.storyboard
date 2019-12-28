@@ -190,16 +190,27 @@
                     </view>
                     <navigationItem key="navigationItem" title="메모 작성" id="5FO-yO-X5g">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" systemItem="camera" id="Rdh-lR-9MB"/>
+                            <barButtonItem style="plain" systemItem="camera" id="Rdh-lR-9MB">
+                                <connections>
+                                    <action selector="pick:" destination="0Qq-cf-Dgs" id="RZ7-fT-TmR"/>
+                                </connections>
+                            </barButtonItem>
                             <barButtonItem style="plain" id="5z0-pQ-sWq">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="x49-bl-in0">
                                     <rect key="frame" x="253.5" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="저장"/>
                                 </button>
+                                <connections>
+                                    <action selector="save:" destination="0Qq-cf-Dgs" id="IC9-ux-D1h"/>
+                                </connections>
                             </barButtonItem>
                         </rightBarButtonItems>
                     </navigationItem>
+                    <connections>
+                        <outlet property="contents" destination="4tC-gB-puD" id="M4z-wj-810"/>
+                        <outlet property="preview" destination="vjw-I0-K0C" id="a2G-Lc-SA8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maO-4E-gld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
