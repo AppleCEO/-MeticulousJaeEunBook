@@ -9,6 +9,8 @@
 import UIKit
 
 class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextViewDelegate {
+    var subject: String!
+    
     @IBOutlet var contents: UITextView!
     @IBOutlet var preview: UIImageView!
     
@@ -32,5 +34,13 @@ class MemoFormVC: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         self.preview.image = info[UIImagePickerController.InfoKey.editedImage] as? UIImage
         
         picker.dismiss(animated: false)
+    }
+    
+    func textViewDidChange(_ textView: UITextView) {
+        let contents = textView.text as NSString
+        let length = ( (contents.length > 15) ? 15 : contents.length )
+        self.subject = contents.substring(with: NSRange(location: 0, length: length))
+        
+        self.navigationItem.title = subject
     }
 }
