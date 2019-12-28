@@ -230,10 +230,10 @@
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="-56.25"/>
         </scene>
-        <!--바뀐 화면 이름-->
+        <!--상세 화면-->
         <scene sceneID="UH3-7g-md7">
             <objects>
-                <viewController title="상세 화면" id="sNQ-Ob-oNS" userLabel="바뀐 화면 이름" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemoRead" title="상세 화면" id="sNQ-Ob-oNS" customClass="MemoReadVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j9b-7B-lVD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -274,6 +274,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EaO-I8-SvL"/>
                     </view>
+                    <connections>
+                        <outlet property="contents" destination="I8P-MY-WAV" id="1bL-HE-HgK"/>
+                        <outlet property="img" destination="MCs-XJ-yUg" id="exA-be-ZM4"/>
+                        <outlet property="subject" destination="yZZ-bu-TZo" id="MLN-J2-kgg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vhi-jl-NhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
