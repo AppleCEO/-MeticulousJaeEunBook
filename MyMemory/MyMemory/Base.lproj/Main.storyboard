@@ -11,7 +11,7 @@
         <scene sceneID="ATO-Hq-yzG">
             <objects>
                 <tableViewController id="Wu8-jn-gPb" customClass="MemoListVC" customModule="MyMemory" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSy-oA-RUe">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="28" sectionFooterHeight="28" id="VSy-oA-RUe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -211,6 +211,9 @@
                                     <rect key="frame" x="253.5" y="7" width="92" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <state key="normal" title="저장"/>
+                                    <connections>
+                                        <action selector="save:" destination="0Qq-cf-Dgs" eventType="touchUpInside" id="5tu-Nj-Qe4"/>
+                                    </connections>
                                 </button>
                                 <connections>
                                     <action selector="save:" destination="0Qq-cf-Dgs" id="IC9-ux-D1h"/>
