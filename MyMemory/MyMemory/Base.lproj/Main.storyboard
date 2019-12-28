@@ -144,6 +144,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="sNQ-Ob-oNS" kind="show" identifier="read_sg" id="hQJ-HU-hKx"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHP-YM-IfK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,6 +204,55 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="maO-4E-gld" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="576.81159420289862" y="-56.25"/>
+        </scene>
+        <!--바뀐 화면 이름-->
+        <scene sceneID="UH3-7g-md7">
+            <objects>
+                <viewController title="상세 화면" id="sNQ-Ob-oNS" userLabel="바뀐 화면 이름" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j9b-7B-lVD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="제목" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yZZ-bu-TZo">
+                                <rect key="frame" x="0.0" y="104" width="414" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="D26-aB-NuW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내용" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8P-MY-WAV">
+                                <rect key="frame" x="0.0" y="145" width="414" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MCs-XJ-yUg">
+                                <rect key="frame" x="0.0" y="181" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="4Po-Ch-q3I"/>
+                                    <constraint firstAttribute="width" constant="250" id="MCV-1F-ok9"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="EaO-I8-SvL" firstAttribute="trailing" secondItem="yZZ-bu-TZo" secondAttribute="trailing" id="2bQ-VM-2qB"/>
+                            <constraint firstItem="I8P-MY-WAV" firstAttribute="leading" secondItem="EaO-I8-SvL" secondAttribute="leading" id="84I-Lw-7m6"/>
+                            <constraint firstItem="I8P-MY-WAV" firstAttribute="top" secondItem="yZZ-bu-TZo" secondAttribute="bottom" constant="20" id="Hw7-6O-amw"/>
+                            <constraint firstItem="yZZ-bu-TZo" firstAttribute="leading" secondItem="EaO-I8-SvL" secondAttribute="leading" id="ddQ-2o-G1J"/>
+                            <constraint firstItem="EaO-I8-SvL" firstAttribute="trailing" secondItem="I8P-MY-WAV" secondAttribute="trailing" id="kpa-aq-YOg"/>
+                            <constraint firstItem="MCs-XJ-yUg" firstAttribute="leading" secondItem="EaO-I8-SvL" secondAttribute="leading" id="nCZ-Cc-8xN"/>
+                            <constraint firstItem="MCs-XJ-yUg" firstAttribute="top" secondItem="I8P-MY-WAV" secondAttribute="bottom" constant="20" id="vg1-E8-8sR"/>
+                            <constraint firstItem="yZZ-bu-TZo" firstAttribute="top" secondItem="EaO-I8-SvL" secondAttribute="top" constant="16" id="x1d-Dn-IVW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="EaO-I8-SvL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vhi-jl-NhA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1293" y="-57"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="62h-63-kQ6">
