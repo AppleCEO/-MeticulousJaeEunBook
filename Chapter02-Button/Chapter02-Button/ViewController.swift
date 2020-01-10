@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         let btn = UIButton(type: .system)
         btn.frame = CGRect(x: 50, y: 100, width: 150, height: 30)
         btn.setTitle("테스트 버튼", for: .normal)
+        btn.center = CGPoint(x: view.frame.size.width/2, y: 100)
         view.addSubview(btn)
     }
 
