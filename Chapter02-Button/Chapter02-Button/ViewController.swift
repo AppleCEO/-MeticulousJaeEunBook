@@ -18,8 +18,13 @@ class ViewController: UIViewController {
         btn.setTitle("테스트 버튼", for: .normal)
         btn.center = CGPoint(x: view.frame.size.width/2, y: 100)
         view.addSubview(btn)
+        btn.addTarget(self, action: #selector(buttonOnClick(_:)), for: .touchUpInside)
     }
-
-
+    
+    @objc func buttonOnClick(_ sender: Any) {
+        if let button = sender as? UIButton {
+            button.setTitle("클릭되었습니다", for: .normal)
+        }
+    }
 }
 
