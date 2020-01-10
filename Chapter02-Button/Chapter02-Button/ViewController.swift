@@ -12,7 +12,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let btn = UIButton(type: .system)
+        btn.frame = CGRect(x: 50, y: 100, width: 150, height: 30)
+        btn.setTitle("테스트 버튼", for: .normal)
+        view.addSubview(btn)
     }
 
 
